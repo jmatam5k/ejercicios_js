@@ -98,11 +98,8 @@ Realizar un programa que calcule el cuadm. de la suma de dos Mirra-vos */
 //Ejercicio #8: Numero primo 
 /*Realizar un programa que por medio de una roncion nos indique si el número 
 que el usua. ingresa es primo o no */
-/*
-
-
 function esPrimo(numero){
-	var numero=parseInt(prompt("Ingresa un numero"));
+	
 	var primo=[numero];
 	var contador=0;
 	for (var i = 0; i <= primo; i++) {
@@ -116,10 +113,12 @@ function esPrimo(numero){
 	else{
 		alert("el numero no es primo");
 	}
+	
+}
+function entradaEsPrimo(){
+	var numero=parseInt(prompt("Ingresa un numero"));
 	esPrimo(numero);
 }
-
-*/
 
 //Ejercicio #9: Multiplos de un numero 
 /*Programa que calcula los 10 primeros múltiplos del número que queramos, 
