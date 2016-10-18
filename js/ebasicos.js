@@ -106,12 +106,13 @@ function entradaBrocha(){
 que tendrá el boleto de un viaje sencillo, esto basado en los kilómetros 
 por recorrer y en el costo por kilómetro. */
 function autobuses(kilometros){
+	var costo=210;
 	var boleto= costo*kilometros;
 	alert("Por "+kilometros+" kilometros, el valor del boleto es de $"+boleto);
 }
 function entradaAutobuses(){
 	var kilometros=parseInt(prompt("Ingrese kilometros a recorrer"));
-	var costo=210;
+	
 	autobuses(kilometros); 
 }
 
@@ -119,15 +120,13 @@ function entradaAutobuses(){
 /*Se requiere un algoritmo para determinar el costo que tendrá realizar 
 una llamada telefónica con base en el tiempo que dura la llamada y en el
 costo por minuto. */
-
-
 function llamada(minutos){
+	var costo=60;
 	var vllamada= costo*minutos;
 	alert("Por "+minutos+" minutos, el valor de la llamada es de $"+vllamada);
 }
 function entradaLlamada(){
 	var minutos=parseInt(prompt("Cuantos minutos va a hablar?"));
-	var costo=60;
 	llamada(minutos);
 }
 
@@ -136,21 +135,23 @@ function entradaLlamada(){
 huésped por su estancia en una de sus habitaciones. */
 
 function hotel(estancia){
+	var costo=12000;
 	var vestancia= costo*estancia;
-	alert(huesped+" por "+estancia+" días, el valor de su hospedaje es de $"+vestancia);
+	alert(" por "+estancia+" días, el valor de su hospedaje es de $"+vestancia);
 }
 function entradaHotel(){
 	var huesped=prompt("Cual es su nombre?");
 	var estancia=parseInt(prompt(huesped+" de cuantos días será su estancia?"));
-	var costo=12000;
+	
 	hotel(estancia);
 }
-//Ejercicio #1: División de números 
+//Ejercicio #11: División de números 
 /*Haz un programa que divida 2 numeros, ¿Que sucede si en lugar de dividir
 dos numeros, intentamos dividir 2 textos. ¿Qué sucede si el divisor es 
 el numero 0? */
 
 function numeros_texto(){
+	var eleccion=prompt("Ingresara texto o numero?")
 	if (eleccion=="numero") {
 		var num1=parseInt(prompt("Ingresa un numero"));
 		var num2=parseInt(prompt("Ingresa otro numero"));
@@ -170,44 +171,46 @@ function numeros_texto(){
 	}
 }
 function entradaNumeros_texto(){
-	var eleccion=prompt("Ingresara texto o numero?")
-	var num1,num2,texto1;
 	numeros_texto();
 }
 
-//Ejercicio #2: Conversión de edad 
+//Ejercicio #12: Conversión de edad 
 /*Haz un programa que funcione de la siguiente forma:
 El programa nos pregunta nuestro nombre y nuestra edad. 
-El programa da como resultado nuestro nombre y a continuacion los días 
-que hemos vivido hasta el momento , deberas multiplicar la edad por 365*/
+El programa da como resultado nuestro nombre y a continuacion los 
+días que hemos vivido hasta el momento , deberas multiplicar la 
+edad por 365*/
 
 function conversion(tiempo){
+	
+	var nombre=prompt("Tu nombre?");
+	var edad=parseInt(prompt("Tu edad?"));
 	var vida=edad*365;
 	alert("Tu nombre es "+nombre+" y haz vivido "+vida+ " días");
 }
-/*function entradaConversion{
-	var nombre=prompt("Tu nombre?");
-	var edad=parseInt(prompt("Tu edad?"));
+function entradaConversion(){
+	var nombre,edad;
 	conversion(nombre,edad); 
-}*/
+}
 
-//Ejercicio #3: Formato de output 
+//Ejercicio #13: Formato de output 
 /*Haz un programa que funcione de la siguiente forma:
-El programa nos pregunta nuestro nombre, primer apellido, residencia. */
+El programa nos pregunta nuestro nombre, primer apellido, 
+residencia. */
 
 
 function formato(nombre,apellido,residencia){
 	alert("*************************************\n Tu nombre es "+nombre+" "+apellido+"\n"+" resides en "+residencia+
 		"\n*************************************");
 }
-/*function entradaFormato{
+function entradaFormato(){
 	var nombre=prompt("Tu nombre?");
 	var apellido=prompt("Tu primer apellido?");
 	var residencia=prompt("Cuál es tu lugar de residencia?");
 	formato(nombre,apellido,residencia);
 
 }
-//Ejercicio #4: Contadores 
+//Ejercicio #14: Contadores 
 /*Haz un programa que funcione de la siguiente forma:
  El programa nos pide un número
  Utiliza 3 contadores
@@ -218,20 +221,21 @@ function formato(nombre,apellido,residencia){
 
 
  var contadores=function(numero){
- 	alert("Numero Introducido: "+numero+"\n"+"Contadores: "+contador1+" "+contador2+" "+contador3);
- }
- /*function entradaContadores{
- 	var numero=parseInt(prompt("Ingresa un numero"));
+
  	var contador1=numero+5;
  	var contador2=contador1+21;
  	var contador3=contador2-4;
+ 	alert("Numero Introducido: "+numero+"\n"+"Contadores: "+contador1+" "+contador2+" "+contador3);
+ }
+ function entradaContadores(){
+ 	var numero=parseInt(prompt("Ingresa un numero"));
  	contadores(numero);  
  }
  
-//Ejercicio #1: APROBADO O REPROBADO 
+//Ejercicio #15: APROBADO O REPROBADO 
 /*Se pide leer tres notas de un alumno. Obtener su nota y enviar un 
 mensaje donde diga si el alumno aprobó o reprobó el curso (tomar en 
-cuenta que si obtiene 6 o más aprueba, de lo contrario no) */ 
+cuenta que si obtiene 6 o más aprueba, de lo contrario no) */
 
 var aprobado=function(nota1,nota2,nota3){
 	var promedio=(nota1+nota2+nota3)/3;
@@ -242,14 +246,14 @@ var aprobado=function(nota1,nota2,nota3){
 		alert("Haz reprobado");
 	}
 }
-/*function entradaAprobado{
-	var nota1=parseInt(prompt("Ingrese nota"));
+function entradaAprobado(){
+	var nota1=parseInt(prompt("Ingrese nota de solo 1 digito"));
 	var nota2=parseInt(prompt("Ingrese nota"));
 	var nota3=parseInt(prompt("Ingrese nota"));
 	aprobado(nota1,nota2,nota3); 
 }
 
-//Ejercicio #2: ¿CUÁL ES EL NÚMERO MAS GRANDE? 
+//Ejercicio #16: ¿CUÁL ES EL NÚMERO MAS GRANDE? 
 /*Se desea implementar un algoritmo para determinar cuál de dos valores 
 proporcionados es el mayor. */
 
@@ -262,13 +266,15 @@ function numGrande(num1,num2){
 	}
 
 }
-/*function entradaNumGrande{
+function entradaNumGrande(){
 	var num1=parseInt(prompt("Ingrese un numero"));
 	var num2=parseInt(prompt("Ingrese otro numero"));
+
 	numGrande(num1,num2);
+
 }
 
-//Ejercicio #3: POSITIVO O NEGATIVO 
+//Ejercicio #17: POSITIVO O NEGATIVO 
 /*Realice un algoritmo para determinar si un número es positivo o 
 negativo. */
 
@@ -280,12 +286,12 @@ var pos_neg= function(num){
 		alert(num+" es positivo");
 	}
 }
-/*function entradaPos_neg{
-	var num=parseInt(prompt("Ingrese un número"));
+function entradaPos_neg(){
+	var num=parseInt(prompt("Ingrese un número entero positivo o negativo "));
 	pos_neg(num);
 }
 
-//Ejercicio #4: Almacenes "El harapiento distinguido" 
+//Ejercicio #18: Almacenes "El harapiento distinguido" 
 /*Almacenes 'El harapiento distinguido' tiene una promoción: a todos los 
 trajes que tienen un precio superior a $2500.00 se les aplicará un 
 descuento de 15 %, a todos los demás se les aplicará sólo 8 %. Realice 
@@ -307,18 +313,16 @@ function almacenes (precio){
 		alert("Su descuento es de $"+desc2+", el valor de su traje es de $"+oferta2);
 	}
 }
-/*function entradaAlmacenes{
+function entradaAlmacenes(){
 	var precio=parseInt(prompt("Ingrese el precio del traje"));
 	almacenes(precio);  
 }
 
 
 
-//Ejercicio #5: EL MAYOR DE LOS NÚMEROS 
+//Ejercicio #19: EL MAYOR DE LOS NÚMEROS 
 /*Se requiere determinar cuál de tres cantidades proporcionadas es la 
 mayor. */
-
-
 
 function mayor_num (num1,num2,num3){
 	if (num1>num2 && num1>num3) {
@@ -331,8 +335,8 @@ function mayor_num (num1,num2,num3){
 	else{
 		alert("El numero mayor es "+num3);
 	}
-}
-/*function entradaMayor_num{
+}   
+function entradaMayor_num(){
 	var num1=parseInt(prompt("Ingrese un numero"));
 	var num2=parseInt(prompt("Ingrese otro numero"));
 	var num3=parseInt(prompt("Ingrese otro numero"));
@@ -340,7 +344,7 @@ function mayor_num (num1,num2,num3){
 }
 
 
-//Ejercicio #6: BANQUETES "La langosta ahumada" 
+//Ejercicio #20: BANQUETES "La langosta ahumada" 
 /*"La langosta ahumada es una empresa dedicada a ofrecer banquetes; sus 
 tarifas son las siguientes: el costo de platillo por persona es de 
 $95.00, pero si el número de personas es mayor a 200 pero menor o igual 
